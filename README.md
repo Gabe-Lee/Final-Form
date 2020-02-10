@@ -1,7 +1,6 @@
 # FinalForm v1.0
 
 ## What Is It?
-
 FinalForm is my boilerplate repo for my prefered tech stack, greatly simplifying getting a new project off the ground. The technologies it includes is as follows:
 #### Dev
 - Webpack + Babel
@@ -13,6 +12,9 @@ FinalForm is my boilerplate repo for my prefered tech stack, greatly simplifying
 - Sass
 #### Back-End
 - Express
+#### Testing
+- Jest
+- Supertest
 
 ## Features
 Webpack bundles both the front end code and the back end code into single JavaScript files for easier deployment. It also creates a /dist index.html, transpiles any SASS stylesheets in /src to CSS in /dist, and adds both the JavaScript bundle and stylesheet into the /dist index.html for you.
