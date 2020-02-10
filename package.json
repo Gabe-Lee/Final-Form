@@ -56,9 +56,9 @@
       "<rootDir>/src"
     ],
     "transform": {
-      "*\\.tsx?$": "ts-jest"
+      ".+\\.tsx?$": "ts-jest"
     },
-    "testRegex": "*\\.(test|spec)\\.tsx?$",
+    "testRegex": "**/*\\.(test|spec)\\.tsx?$",
     "moduleFileExtensions": [
       "ts",
       "tsx",
@@ -71,14 +71,13 @@
   "scripts": {
     "test": "jest --runInBand",
     "lint": "tsc --noEmit && eslint '*/**/*.{js,ts,tsx}' --quiet --fix",
-    "watch": "webpack --config webpack.config.js -d --watch & nodemon ./dist/server/server.js & live-server --open=/ --watch=dist --mount=/:dist/client",
-    "start": "webpack --config webpack.config.js -d && node ./dist/server/server.js & live-server --open=/ --watch=dist --mount=/:dist/client",
-    "build": "webpack --config webpack.config.js -p && node ./dist/server/server.js & live-server --open=/ --watch=dist --mount=/:dist/client"
+    "watch": "webpack --config webpack.config.js -d --watch & nodemon ./dist/server/server.js --delay 2000ms & live-server --open=/ --watch=dist --wait=3000 --proxy=/:http://127.0.0.1:3333 & jest --runInBand --watch",
+    "start": "webpack --config webpack.config.js -d && node ./dist/server/server.js & live-server --open=/ --watch=dist --wait=1000 --proxy=/:http://127.0.0.1:3333",
+    "build": "webpack --config webpack.config.js -p && node ./dist/server/server.js & live-server --open=/ --watch=dist --wait=1000 --proxy=/:http://127.0.0.1:3333"
   },
   "dependencies": {
     "axios": "^0.19.2",
-    "cors": "^2.8.5",
-    "express": "^4.17.1",
+    "cors": "^2.8.5",    "express": "^4.17.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-redux": "^7.1.3",
@@ -100,6 +99,7 @@
     "@types/react-redux": "^7.1.7",
     "@types/redux": "^3.6.0",
     "@types/redux-thunk": "^2.1.0",
+    "@types/supertest": "^2.0.8",
     "@typescript-eslint/eslint-plugin": "^2.19.0",
     "@typescript-eslint/parser": "^2.19.0",
     "babel-loader": "^8.0.6",

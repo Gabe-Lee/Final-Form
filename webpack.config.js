@@ -13,7 +13,12 @@ const clientOutFile = 'client.js';
 const clientTitle = '[YOUR_APP_TITLE]';
 const clientTemplate = path.resolve(__dirname, 'src/client/index.html');
 
+const rebuildDelay = 1000;
+
 const frontend = {
+  watchOptions: {
+    aggregateTimeout: rebuildDelay,
+  },
   target: 'web',
   entry: clientEntry,
   output: {
@@ -58,7 +63,14 @@ const frontend = {
 };
 
 const backend = {
+  watchOptions: {
+    aggregateTimeout: rebuildDelay,
+  },
   target: 'node',
+  context: __dirname,
+  node: {
+    __dirname: true,
+  },
   entry: serverEntry,
   output: {
     path: serverOutput,
