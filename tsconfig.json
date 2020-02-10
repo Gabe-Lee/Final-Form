@@ -13,12 +13,10 @@
     "jsx": "react"
   },
   "include": [
-    "src/**/*",
-    "webpack.config.js"
+    "src/**/*"
   ],
   "exclude": [
     "node_modules",
-    "dist",
-    
+    "dist"
   ]
 }

@@ -33,7 +33,8 @@
     "rules": {},
     "ignorePatterns": [
       "dist/**/*",
-      "node_modules/**/*"
+      "node_modules/**/*",
+      "webpack.config.js"
     ],
     "settings": {
       "react": {
