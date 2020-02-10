@@ -9,7 +9,7 @@ FinalForm is my boilerplate repo for my prefered tech stack, greatly simplifying
 - Typescript
 #### Front-End
 - React
-- Redux
+- Redux + Thunk
 - Sass
 #### Back-End
 - Express
