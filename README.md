@@ -14,6 +14,7 @@ FinalForm is my boilerplate repo for my prefered tech stack, greatly simplifying
 - Express
 #### Testing
 - Jest
+- Enzyme
 - Supertest
 
 ## Features
