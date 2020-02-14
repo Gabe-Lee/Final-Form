@@ -22,13 +22,10 @@ Webpack bundles both the front end code and the back end code into single JavaSc
 
 The repo contains eslint, babel, and prettier settings directly in the package.json to minimize file structure pollution. The settings included in those and the tsconfig.json file include many optional preferences.
 
-## How to use this repo
-1. Create a completely blank new repo on your github (no readme or license)
-2. Navigate to your desired destination directory
-3. Run the following command in the terminal from the directory, replacing the placeholder with the url of your newly created repo:
-
-``` git clone --bare https://github.com/Gabe-Lee/final-form.git && cd final-form.git && git push --mirror [YOUR_BRAND_NEW_REPO_URL] && cd .. && rm -rf final-form.git```
-
+## How to use this boilerplate
+1. Click "Use this template" at top
+2. Select what organization you want to own the new repo
+3. Name your new repo and optionaly give it a description
 4. You can now clone down your new repo from github as you normally would
 5. Run ```yarn install``` or ```npm install``` to download all packages (Yarn recommended, or even pnpm, over npm)
 6. Run ```yarn watch``` or ```npm run watch``` to begin developing your app. The first build may cause liveserver to open the base directory before the /dist folder has been built, but it should reload correctly as soon as its done.
